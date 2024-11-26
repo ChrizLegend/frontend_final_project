@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, #root, .app-container{
+    width: 100%;
+    height: fit-content;
+    background-color: whitesmoke;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+header nav{
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;  
+    gap: 40px;
+}
+
+header nav a{
+    font-size: 14px;
+    transition: 0.6s;
+    cursor: pointer;
+    color: grey;
+}
+
+header nav a:hover{
+    transform: scale(1.1);
+    color: skyblue;
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: skyblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main .creatAcc >  button{
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 60px;
+
+}
+
+
+main .creatAcc button div{
+    position: absolute;
+    cursor: pointer;
+    transition: 0.6s;
+    right: -150px;
+    z-index: 3;
+}
+
+main .creatAcc button article{
+    width: 300px;
+    height: 120px;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: -150px;
+    z-index: 1;
+    display: flex;
+    transition: 0.6s;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+main .creatAcc article img{
+    height: 70px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+
+
+/* main article > span input{
+    display: none;
+} */
+
+main .creatAcc article  span label{
+    border: none;
+    color: grey;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main .creatAcc form{
+    width: 25%;
+    height: 85%;
+    padding-top: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+main .creatAcc form h3, main .login form h3{
+    align-self: center;
+    font-weight: 500;
+}
+
+main .creatAcc form input, main .login form input{
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+}
+
+main .creatAcc form input:focus, main .login form input:focus{
+    border-color: darkslateblue;
+}
+
+main .creatAcc form input::placeholder, main .login form input::placeholder{
+    font-size: 14px;
+    color: rgb(218, 213, 213);
+}
+
+main .creatAcc form button, main .login form button{
+    padding: 10px;
+    border: 1px solid darkorange;
+    border-radius: 5px;
+    outline: none;
+    background-color: darkorange;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+main .creatAcc form button:hover, main .login form button:hover{
+    background-color: darkslateblue;
+    border-color: darkslateblue;
+}
+
+main .creatAcc form span, main .login form span{
+    align-self: center;
+    font-size: 12px;
+    color: grey;
+}
+
+main .creatAcc form span a, main .login form span a{
+    color: darkorange;
+    font-weight: 700;
+}
+
+.successfulAcc,.creatAcc, .login, .start_btn{
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: skyblue;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successfulAcc div{
+    width: 25%;
+    height: 320px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.successfulAcc div a > img{
+    position: absolute;
+    left: -100px;
+    top: 70px;
+    cursor: pointer;
+}
+
+.successfulAcc div article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.successfulAcc div article img{
+    align-self: center;
+    object-fit: contain;
+}
+
+.successfulAcc div article button{
+    border: 1px solid darkorange;
+    background-color: darkorange;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    left: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.successfulAcc div article button:hover{
+    background-color: darkblue;
+    border-color: darkblue;
+}
+
+main .login form{
+    width: 25%;
+    height: fit-content;
+    padding-top: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.start_btn button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.start_btn button img{
+    object-fit: contain;
+}
+
+.ready{
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.ready p{
+    width: fit-content;
+    border-radius: 5px;
+    background-color: rgb(221, 11, 11);
+    font-size: 20px;
+    color: white;
+    padding: 15px 30px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    box-shadow: 0px 8px 16px rgba(221, 11, 11, 0.3);
+}
+
+.ready aside{
+    display: flex;
+    gap: 50px;
+  
+}
+
+.ready aside span{
+    border: 1px solid darkred;
+    padding: 17px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.ready aside span:hover{
+    background-color: darkred;
+    color: white;
+}
+
+.ques{
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: pink;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.ques div{
+    width: 55%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ques div .first-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ques div .first-area img{
+    background-color: antiquewhite;
+    height: 70px;
+    object-fit: contain;
+}
+
+.ques div .first-area b{
+    width: 70px;
+    height: 70px;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.ques div .second-area{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ques div .second-area b{
+    width: 100%;
+    font-size: 14px;
+}
+
+.ques div .second-area ul{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+   
+
+}
+
+.ques div .second-area ul li{
+    width: 100%;
+    margin-left: 30px;
+    font-size: 14px;
+    list-style: circle;
+    cursor: pointer; 
+}
+
+.ques div .second-area ul li:hover{
+    color: darkred;
+}
+
+
+.ques div .third-area{
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.ques div .third-area aside{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ques div .third-area aside span{
+    width: 15px;
+    height: 15px;
+    border: 2px solid darkred;
+    border-radius: 50%;
+    color: transparent;
+    transition: 0.6s;
+}
+
+.ques div .third-area aside .first-span{
+    background-color: darkred;
+}
+
+.ques div .third-area button{
+    width: 80px;
+    height: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: transparent;
+    background-color: lightgray;
+    font-size: 15px;
+    color: red;
+    font-weight: 400;
+}
+
+.results{
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: lightgrey;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results div > img{
+    align-self: center;
+    object-fit: contain;
+    opacity: 5%;
+    position: absolute;
+    top: 80px;
+}
+
+.results div .top-area{
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results div .top-area aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.results div .top-area > img{
+    object-fit: contain;
+}
+
+.results div{
+    width: 55%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.results div .details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.results div .details h4{
+    width: 80%;
+    padding: 5px;
+    display: flex;
+    gap: 50px;
+}
+
+.results div .details h4 b{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+}
+
+.results div .details h4 span{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.skyblue{
+    background-color: rgb(235, 253, 247);
+}
+
+.results div > aside{
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.results div aside img{
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.results div aside img:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+footer p{
+    color: grey;
+    font-size: 12px;
+}
+
+footer p i{
+    color: darkorange;
+}
